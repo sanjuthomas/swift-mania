@@ -1,4 +1,5 @@
-## MT103 vs pacs.008  (Single Customer Credit Transfer, FIToFICustomerCreditTransfer, Customer Payment, Payer to Payee)
+## MT103 vs pacs.008 
+Aka: Single Customer Credit Transfer, FIToFICustomerCreditTransfer, Customer Payment, Payer to Payee)
 
 | **MT103 Tag** | **Meaning** | **pacs.008 (ISO 20022 XML Element)** |
 |---------------|-------------|---------------------------------------|
