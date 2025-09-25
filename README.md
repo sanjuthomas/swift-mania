@@ -20,3 +20,15 @@
 | `:71G:` | Receiver’s Charges | `CdtTrfTxInf/ChrgsInf/Amt` *(depending on agent)* |
 | `:72:` | Sender to Receiver Information | `CdtTrfTxInf/InstrForNxtAgt` / `InstrForCdtrAgt` |
 | `:77B:` | Regulatory Reporting | `CdtTrfTxInf/RgltryRptg` |
+
+## MT210 vs CAMT.050
+| **MT210 Tag** | **Meaning** | **camt.050 (ISO 20022 XML Element)** |
+|---------------|-------------|---------------------------------------|
+| `:20:` | Transaction Reference Number | `<GrpHdr><MsgId>` *(message identifier)* or `<Ntfctn><Id>` |
+| `:25:` | Account Identification (account to be credited) | `<Ntfctn><Acct><Id><IBAN>` or `<Othr><Id>` |
+| `:32A:` | Value Date, Currency, Amount | `<Ntfctn><Ntry><ValDt><Dt>` + `<Amt Ccy="...">` |
+| `:52A:` | Ordering Institution (originating bank) | `<Ntfctn><Ntry><NtryDtls><TxDtls><RltdPties><DbtrAgt>` |
+| `:58A:` | Beneficiary Institution (account with bank) | `<Ntfctn><Ntry><NtryDtls><TxDtls><RltdPties><CdtrAgt>` |
+| — | Message creation date/time (not explicit in MT210) | `<GrpHdr><CreDtTm>` |
+| — | Number of transactions (not explicit in MT210) | `<GrpHdr><NbOfNtfctns>` |
+| — | Statement/notification ID | `<Ntfctn><Id>` |
