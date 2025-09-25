@@ -1,4 +1,4 @@
-## MT103 vs PACS.008
+## MT103 vs pacs.008
 
 | **MT103 Tag** | **Meaning** | **pacs.008 (ISO 20022 XML Element)** |
 |---------------|-------------|---------------------------------------|
@@ -21,7 +21,22 @@
 | `:72:` | Sender to Receiver Information | `CdtTrfTxInf/InstrForNxtAgt` / `InstrForCdtrAgt` |
 | `:77B:` | Regulatory Reporting | `CdtTrfTxInf/RgltryRptg` |
 
-## MT210 vs CAMT.050
+## MT202 vs pacs.009
+
+| **MT202 Tag** | **Meaning** | **pacs.009 Core (ISO 20022 XML Element)** |
+|---------------|-------------|--------------------------------------------|
+| `:20:` | Transaction Reference Number | `<FIToFICstmrCdtTrf><GrpHdr><MsgId>` or `<CdtTrfTxInf><PmtId><InstrId>` |
+| `:21:` | Related Reference | `<CdtTrfTxInf><PmtId><EndToEndId>` or `<TxId>` *(usage depends on context)* |
+| `:32A:` | Value Date, Currency, Amount | `<CdtTrfTxInf><IntrBkSttlmDt>` + `<IntrBkSttlmAmt Ccy="...">` |
+| `:52A/D:` | Ordering Institution (Debtor Agent) | `<CdtTrfTxInf><DbtrAgt><FinInstnId><BICFI>` |
+| `:53A/D:` | Sender’s Correspondent (optional) | `<CdtTrfTxInf><IntrmyAgt1><FinInstnId>` |
+| `:54A/D:` | Receiver’s Correspondent (optional) | `<CdtTrfTxInf><IntrmyAgt2><FinInstnId>` |
+| `:56A/D:` | Intermediary Institution (optional) | `<CdtTrfTxInf><IntrmyAgt3><FinInstnId>` |
+| `:57A/D:` | Account With Institution (Creditor Agent) | `<CdtTrfTxInf><CdtrAgt><FinInstnId><BICFI>` |
+| `:58A/D:` | Beneficiary Institution | `
+
+
+## MT210 vs camt.050
 | **MT210 Tag** | **Meaning** | **camt.050 (ISO 20022 XML Element)** |
 |---------------|-------------|---------------------------------------|
 | `:20:` | Transaction Reference Number | `<GrpHdr><MsgId>` *(message identifier)* or `<Ntfctn><Id>` |
