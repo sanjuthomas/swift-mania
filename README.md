@@ -48,3 +48,21 @@ Aka: Single Customer Credit Transfer, FIToFICustomerCreditTransfer, Customer Pay
 | — | Message creation date/time (not explicit in MT210) | `<GrpHdr><CreDtTm>` |
 | — | Number of transactions (not explicit in MT210) | `<GrpHdr><NbOfNtfctns>` |
 | — | Statement/notification ID | `<Ntfctn><Id>` |
+
+
+## 📑 CAMT.054 Key Tags & Sample Values  
+
+| Tag / Element        | Example Value             | Meaning                                |
+|----------------------|---------------------------|----------------------------------------|
+| `<MsgId>`            | `NOTIF20240928`           | Unique message identifier              |
+| `<CreDtTm>`          | `2025-09-28T10:15:00`     | Creation timestamp                     |
+| `<Acct>/<IBAN>`      | `DE89370400440532013000`  | Customer account IBAN                  |
+| `<Ccy>`              | `EUR`                     | Currency of account                    |
+| `<Amt Ccy="EUR">`    | `1500.00`                 | Amount booked                          |
+| `<CdtDbtInd>`        | `CRDT`                    | Credit (`DBIT` for debit)              |
+| `<Sts>`              | `BOOK`                    | Booking status                         |
+| `<BookgDt>/<Dt>`     | `2025-09-28`              | Booking date                           |
+| `<ValDt>/<Dt>`       | `2025-09-28`              | Value date                             |
+| `<InstrId>`          | `INSTR123456`             | Instruction ID                         |
+| `
+
