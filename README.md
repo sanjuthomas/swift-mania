@@ -23,6 +23,7 @@ Aka: Single Customer Credit Transfer, FIToFICustomerCreditTransfer, Customer Pay
 | `:77B:` | Regulatory Reporting | `CdtTrfTxInf/RgltryRptg` |
 
 ## MT202 vs pacs.009
+Aka: Financial Institution Credit Transfer (FIToFICreditTransfer)
 
 | **MT202 Tag** | **Meaning** | **pacs.009 Core (ISO 20022 XML Element)** |
 |---------------|-------------|--------------------------------------------|
