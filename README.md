@@ -64,5 +64,31 @@ Aka: Single Customer Credit Transfer, FIToFICustomerCreditTransfer, Customer Pay
 | `<BookgDt>/<Dt>`     | `2025-09-28`              | Booking date                           |
 | `<ValDt>/<Dt>`       | `2025-09-28`              | Value date                             |
 | `<InstrId>`          | `INSTR123456`             | Instruction ID                         |
-| `
+| `<EndToEndId>`       | `E2E987654321`            | End-to-End reference                   |
+| `<TxId>`             | `TX20250928001`           | Transaction ID                         |
+| `<Dbtr>/<Nm>`        | `John Doe`                | Debtor (payer)                         |
+| `<Cdtr>/<Nm>`        | `Corporate Customer GmbH` | Creditor (payee)                       |
+| `<RmtInf>/<Ustrd>`   | `Invoice 1234 Payment`    | Remittance info (unstructured text)    |
+
+
+
+
+## 📑 CAMT.057 Key Tags & Sample Values  
+
+| Tag / Element        | Example Value             | Meaning                                               |
+|----------------------|---------------------------|-------------------------------------------------------|
+| `<MsgId>`            | `CXLREQ20250928`          | Unique message identifier                             |
+| `<CreDtTm>`          | `2025-09-28T11:20:00`     | Creation timestamp                                    |
+| `<Assgnmt>`          |                           | Assignment info (who is requesting whom)              |
+| `<Assgnr>/<Agt>`     | BIC `BANKDEFFXXX`         | Assignor (party requesting cancellation, usually bank)|
+| `<Assgne>/<Agt>`     | BIC `BANKUS33XXX`         | Assignee (party receiving cancellation request)       |
+| `<CxlReqDtls>`       |                           | Block with payment(s) to be cancelled                 |
+| `<TxId>`             | `TX20250928001`           | Original transaction identifier                       |
+| `<PmtInstrId>`       | `PMT-12345`               | Original payment instruction ID                       |
+| `<EndToEndId>`       | `INV-98765`               | End-to-end reference of original payment              |
+| `<UETR>`             | `550e8400-e29b-41d4-a716-446655440000` | Unique End-to-End Transaction Reference (UUID) |
+| `<Case>`             | `CASE20250928`            | Optional case identifier (if linked to case mgmt)     |
+| `<Rsn>/<Cd>`         | `DUPL`                    | Reason for cancellation (e.g., DUPL = duplicate)      |
+| `<AddtlInf>`         | `Duplicate payment, please cancel` | Free-text additional info                      |
+
 
