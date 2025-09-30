@@ -52,6 +52,7 @@ Aka: Financial Institution Credit Transfer (FIToFICreditTransfer)
 
 
 ## 📑 CAMT.054 Key Tags & Sample Values  
+Bank-to-Customer Debit/Credit Notification
 
 | Tag / Element        | Example Value             | Meaning                                |
 |----------------------|---------------------------|----------------------------------------|
